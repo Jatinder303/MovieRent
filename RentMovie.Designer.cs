@@ -60,6 +60,7 @@
             this.btn_AllMovies.TabIndex = 2;
             this.btn_AllMovies.Text = "All Movies";
             this.btn_AllMovies.UseVisualStyleBackColor = true;
+            this.btn_AllMovies.Click += new System.EventHandler(this.Btn_AllMovies_Click);
             // 
             // MovieRent
             // 

@@ -31,6 +31,7 @@
             this.DGV_RentMovie = new System.Windows.Forms.DataGridView();
             this.btn_RentOutMovie = new System.Windows.Forms.Button();
             this.btn_AllMovies = new System.Windows.Forms.Button();
+            this.btn_CustomerWithMostVideos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_RentMovie)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@
             // 
             // btn_AllMovies
             // 
-            this.btn_AllMovies.Location = new System.Drawing.Point(333, 362);
+            this.btn_AllMovies.Location = new System.Drawing.Point(376, 362);
             this.btn_AllMovies.Name = "btn_AllMovies";
             this.btn_AllMovies.Size = new System.Drawing.Size(165, 23);
             this.btn_AllMovies.TabIndex = 2;
@@ -62,11 +63,22 @@
             this.btn_AllMovies.UseVisualStyleBackColor = true;
             this.btn_AllMovies.Click += new System.EventHandler(this.Btn_AllMovies_Click);
             // 
+            // btn_CustomerWithMostVideos
+            // 
+            this.btn_CustomerWithMostVideos.Location = new System.Drawing.Point(180, 362);
+            this.btn_CustomerWithMostVideos.Name = "btn_CustomerWithMostVideos";
+            this.btn_CustomerWithMostVideos.Size = new System.Drawing.Size(165, 23);
+            this.btn_CustomerWithMostVideos.TabIndex = 3;
+            this.btn_CustomerWithMostVideos.Text = "Customer With Most Videos";
+            this.btn_CustomerWithMostVideos.UseVisualStyleBackColor = true;
+            this.btn_CustomerWithMostVideos.Click += new System.EventHandler(this.Btn_CustomerWithMostVideos_Click);
+            // 
             // MovieRent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_CustomerWithMostVideos);
             this.Controls.Add(this.btn_AllMovies);
             this.Controls.Add(this.btn_RentOutMovie);
             this.Controls.Add(this.DGV_RentMovie);
@@ -82,6 +94,7 @@
         private System.Windows.Forms.DataGridView DGV_RentMovie;
         private System.Windows.Forms.Button btn_RentOutMovie;
         private System.Windows.Forms.Button btn_AllMovies;
+        private System.Windows.Forms.Button btn_CustomerWithMostVideos;
     }
 }
 

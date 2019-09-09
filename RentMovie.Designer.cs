@@ -61,6 +61,7 @@
             this.DGV_RentMovie.Name = "DGV_RentMovie";
             this.DGV_RentMovie.Size = new System.Drawing.Size(448, 251);
             this.DGV_RentMovie.TabIndex = 0;
+            this.DGV_RentMovie.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_SelectedRow);
             // 
             // btn_RentOutMovie
             // 
@@ -239,6 +240,7 @@
             this.btn_UpdateMovie.TabIndex = 21;
             this.btn_UpdateMovie.Text = "Update Movie";
             this.btn_UpdateMovie.UseVisualStyleBackColor = true;
+            this.btn_UpdateMovie.Click += new System.EventHandler(this.btn_UpdateMovie_Click);
             // 
             // btn_DeleteMovie
             // 
@@ -279,6 +281,7 @@
             this.Controls.Add(this.DGV_RentMovie);
             this.Name = "MovieRent";
             this.Text = "Movie Rent";
+            this.Load += new System.EventHandler(this.MovieRent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_RentMovie)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

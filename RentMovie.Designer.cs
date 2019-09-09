@@ -229,6 +229,7 @@
             this.btn_AddMovie.TabIndex = 20;
             this.btn_AddMovie.Text = "Add Movie";
             this.btn_AddMovie.UseVisualStyleBackColor = true;
+            this.btn_AddMovie.Click += new System.EventHandler(this.Btn_AddMovie_Click);
             // 
             // btn_UpdateMovie
             // 

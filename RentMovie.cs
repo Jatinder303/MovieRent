@@ -54,5 +54,23 @@ namespace MovieRent
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Btn_AddMovie_Click(object sender, EventArgs e)
+        {
+            if (txt_Rating.Text != "" && txt_Title.Text != "" &&)
+            {
+                Obj_Database.InsertUpdateDelete(queryInsert);
+
+                txt_MovieID.Text = "";
+                txt_Rating.Text = "";
+                txt_Title.Text = "";
+                txt_Year.Text = "";
+                txt_RentalCost.Text = "";
+                txt_Copies.Text = "";
+                txt_Plot.Text = "";
+                txt_Genre.Text = "";
+
+            }
+        }
     }
 }

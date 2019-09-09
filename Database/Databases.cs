@@ -28,5 +28,14 @@ namespace MovieRent.Database
             return dt;
         }
 
+        public void InsertUpdateDelete(string queryInsertUpdateDelete)
+        {
+            Cmd.Connection = Conn;
+            Cmd.CommandText = queryInsertUpdateDelete;
+            Conn.Open();
+            Cmd.ExecuteNonQuery();
+            Conn.Close();
+        }
+
     }
 }

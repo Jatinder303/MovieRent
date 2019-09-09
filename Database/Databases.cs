@@ -9,9 +9,10 @@ namespace MovieRent.Database
         private SqlCommand Cmd = new SqlCommand();
         private SqlDataAdapter da = new SqlDataAdapter();
 
+      
         public Databases()
         {
-            string ConnString = @"Data Source=DPKASTG-05\SQLEXPRESS;Initial Catalog=VideoRental;Integrated Security=True";
+            string ConnString = @"Data Source=WT135-826LSW\SQLEXPRESS;Initial Catalog=VideoRental;Integrated Security=True";
             Conn.ConnectionString = ConnString;
             Cmd.Connection = Conn;
         }
@@ -28,9 +29,11 @@ namespace MovieRent.Database
             return dt;
         }
 
-        public void InsertUpdateDelete(string queryInsertUpdateDelete)
+        public void MovieInsert(string queryInsertUpdateDelete)
         {
-            Cmd.Connection = Conn;
+            string queryInsert = "Insert into Movies (Rating, Title, Year, Rental_Cost, Copies,Plot, Genre) Values (txt_Rating.Text)";
+
+
             Cmd.CommandText = queryInsertUpdateDelete;
             Conn.Open();
             Cmd.ExecuteNonQuery();

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace MovieRent
@@ -57,9 +58,11 @@ namespace MovieRent
 
         private void Btn_AddMovie_Click(object sender, EventArgs e)
         {
-            if (txt_Rating.Text != "" && txt_Title.Text != "" &&)
+            if (txt_Rating.Text != "" && txt_Title.Text != "" && txt_Year.Text != "" && txt_RentalCost.Text != "" && txt_Copies.Text != "" && txt_Plot.Text != "" && txt_Genre.Text != "")
             {
-                Obj_Database.InsertUpdateDelete(queryInsert);
+
+
+                 Obj_Database.MovieInsert(txt_Rating.Text,txt_Title.Text,txt_Year.Text,txt_RentalCost.Text,txt_Copies.Text,txt_Plot.Text,txt_Genre.Text);
 
                 txt_MovieID.Text = "";
                 txt_Rating.Text = "";

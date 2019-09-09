@@ -89,6 +89,21 @@ namespace MovieRent
             load();
         }
 
+        private void btn_DeleteMovie_Click(object sender, EventArgs e)
+        {
+            string message = Obj_Database.MovieDelete(Convert.ToInt32(txt_MovieID.Text));
+            MessageBox.Show(message);
+            txt_MovieID.Text = "";
+            txt_Rating.Text = "";
+            txt_Title.Text = "";
+            txt_Year.Text = "";
+            txt_RentalCost.Text = "";
+            txt_Copies.Text = "";
+            txt_Plot.Text = "";
+            txt_Genre.Text = "";
+            load();
+        }
+
         private void Btn_RentOutMovie_Click(object sender, System.EventArgs e)
         {
             DGV_RentMovie.DataSource = null;
@@ -133,7 +148,6 @@ namespace MovieRent
                 MessageBox.Show(ex.Message);
             }
         }
-
 
 
     }

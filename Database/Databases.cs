@@ -112,6 +112,39 @@ namespace MovieRent.Database
                 }
             }
         }
+        public string MovieDelete(int MovieID)
+        {//this method is used to update the movie 
+            try
+            {
+                Cmd.Parameters.Clear();
+                Cmd.Connection = Conn;
+                QueryString = "Delete from Movies where MovieID like @MovieID";
+
+                Cmd.Parameters.AddWithValue("@MovieID", MovieID);
+
+                Cmd.CommandText = QueryString;
+
+                //connection opened
+                Conn.Open();
+
+                // Executed query
+                Cmd.ExecuteNonQuery();
+                return "Movie is deleted Successfully";
+            }
+            catch (Exception ex)
+            {
+                // show error Message
+                return ex.Message;
+            }
+            finally
+            {
+                // close connection
+                if (Conn != null)
+                {
+                    Conn.Close();
+                }
+            }
+        }
 
     }
 }

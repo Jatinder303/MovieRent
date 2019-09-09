@@ -250,6 +250,7 @@
             this.btn_DeleteMovie.TabIndex = 22;
             this.btn_DeleteMovie.Text = "Delete Movie";
             this.btn_DeleteMovie.UseVisualStyleBackColor = true;
+            this.btn_DeleteMovie.Click += new System.EventHandler(this.btn_DeleteMovie_Click);
             // 
             // MovieRent
             // 
